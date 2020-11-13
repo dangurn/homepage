@@ -1,9 +1,26 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background: ghostwhite;
+}
+
+body {
+    margin: 0px;
+    padding-top: 55px;
+    color: #333;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 300;
+    user-select: none;
+}
+
+.orange {
+    color: #bd4f01;
+}
+
 .App {
    
     header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
     }
 
 }
