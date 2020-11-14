@@ -1,26 +1,88 @@
+:root {
+    --accent-color: #bd4f01;
+    --nav-height: 50px;
+    --background-color: ghostwhite;
+  }
+
 html, body {
     height: 100%;
     width: 100%;
-    background: ghostwhite;
+    background-color: var(--background-color);
 }
 
 body {
     margin: 0px;
-    padding-top: 55px;
     color: #333;
     font-family: 'Roboto Slab', sans-serif;
     font-weight: 300;
     user-select: none;
+    display: flex;
+    justify-content: center;
 }
 
-.orange {
-    color: #bd4f01;
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
+
+span.Accent {
+    color: var(--accent-color);
+}
+
 
 .App {
+    width: 1000px;
    
     header {
         text-align: center;
+    }
+
+}
+
+
+nav {
+    position: fixed;
+    width: inherit;
+    height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+
+    a {
+        margin-right: 10px;
+        font-weight: 600;
+        color: unset;
+
+        &:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    }
+}
+
+
+main {
+
+    padding-top: var(--nav-height);
+
+}
+
+
+
+@media (max-width: 1024px) {
+
+    body {
+        display: block;
+    }
+
+    .App {
+        width: 100%;
+        margin: 0px 12px;
     }
 
 }
